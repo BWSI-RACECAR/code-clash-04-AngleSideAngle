@@ -33,8 +33,8 @@ import math
 
 class Solution:    
 
-    def distance(p1, p2):
-        return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]))
+    # def distance(p1, p2):
+    #     return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]))
          
 
     def longestdistance(self, checkpoints):
@@ -45,7 +45,7 @@ class Solution:
             #TODO: Write code below to returnn an int with the solution to the prompt.
             longest = 0
             for i in range(checkpoints[1:]):
-                d = self.distance(checkpoints[i], checkpoints[i-1])
+                d = math.fabs(checkpoints[i] - checkpoints[i-1])
                 if d > longest:
                     longest = d
             return longest
