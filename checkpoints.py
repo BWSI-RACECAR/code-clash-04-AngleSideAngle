@@ -44,10 +44,11 @@ class Solution:
             
             #TODO: Write code below to returnn an int with the solution to the prompt.
             longest = 0
-            for i in range(1, len(checkpoints)):
-                d = math.fabs(checkpoints[i] - checkpoints[i-1])
-                if d > longest:
-                    longest = d
+            for i in checkpoints:
+                for j in checkpoints:
+                    d = math.fabs(checkpoints[i] - checkpoints[j])
+                    if d > longest:
+                        longest = d
             return longest
 
 def main():
