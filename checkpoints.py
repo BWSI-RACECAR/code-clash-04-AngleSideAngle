@@ -44,7 +44,6 @@ class Solution:
                         tmp = checkpoints[i]
                         checkpoints[i] = checkpoints[j]
                         checkpoints[j] = tmp
-                        i += 1
 
             longest = 0
             for i in range(1, len(checkpoints)):
