@@ -46,7 +46,7 @@ class Solution:
             longest = 0
             for i in checkpoints:
                 for j in checkpoints:
-                    d = math.fabs(checkpoints[i] - checkpoints[j])
+                    d = math.fabs(i - j)
                     if d > longest:
                         longest = d
             return longest
