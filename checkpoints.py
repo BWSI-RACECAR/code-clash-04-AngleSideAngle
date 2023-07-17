@@ -40,7 +40,7 @@ class Solution:
 
             for i in range(len(checkpoints)):
                 for j in range(len(checkpoints) - 1):
-                    if j < i:
+                    if checkpoints[j] < checkpoints[i]:
                         tmp = checkpoints[i]
                         checkpoints[i] = checkpoints[j]
                         checkpoints[j] = tmp
