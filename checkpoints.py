@@ -37,8 +37,13 @@ class Solution:
             # Sort checkpoints from least to greatest
             #type num: list of int
             #return type: int
-            
-            #TODO: Write code below to returnn an int with the solution to the prompt.
+
+            for i in range(1, len(checkpoints)):
+                if (checkpoints[i-1] > checkpoints[i]):
+                    tmp = checkpoints[i]
+                    checkpoints[i] = checkpoints[i-1]
+                    checkpoints[i-1] = tmp
+
             longest = 0
             for i in range(1, len(checkpoints)):
                 d = math.fabs(checkpoints[i] - checkpoints[i-1])
