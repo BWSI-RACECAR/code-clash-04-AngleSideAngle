@@ -39,7 +39,7 @@ class Solution:
             #return type: int
 
             for i in range(len(checkpoints)):
-                for j in range(i, len(checkpoints)):
+                for j in range(len(checkpoints) - 1):
                     if j < i:
                         tmp = checkpoints[i]
                         checkpoints[i] = checkpoints[j]
