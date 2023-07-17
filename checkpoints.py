@@ -38,17 +38,14 @@ class Solution:
             #type num: list of int
             #return type: int
 
-            for i in range(len(checkpoints)):
-                for j in range(i, len(checkpoints)):
-                    if j < i:
-                        tmp = checkpoints[i]
-                        checkpoints[i] = checkpoints[j]
-                        checkpoints[j] = tmp
-                        continue
-                # if (checkpoints[i-1] > checkpoints[i]):
-                #     tmp = checkpoints[i]
-                #     checkpoints[i] = checkpoints[i-1]
-                #     checkpoints[i-1] = tmp
+            # i hate myself for this
+            for _ in range(len(checkpoints)):
+                for i in range(len(checkpoints)):
+                    for j in range(i, len(checkpoints)):
+                        if j < i:
+                            tmp = checkpoints[i]
+                            checkpoints[i] = checkpoints[j]
+                            checkpoints[j] = tmp
 
             longest = 0
             for i in range(1, len(checkpoints)):
